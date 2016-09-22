@@ -153,9 +153,14 @@ published: True
 
 ### 窗口控制  
 
+    `ba [n]`             # split all buffer vertically or n
+    'vert ba [n]'        # split all buffer horizontally or n
     `Ctrl + w +方向键`    # 切换到前／下／上／后一个窗格
     `Ctrl + w + h/j/k/l` # 同上
     `Ctrl + ww`          # 依次向后切换到下一个窗格中
+    `ctrl + w _`         # Max out the height of the current split
+    `ctrl + w |`         # Max out the width of the current split
+    `ctrl + w =`         # Normalize all split sizes, which is very handy when resizing terminal
     `:qll`               # 退出所有窗口
 
 ## 可视模式快捷键  
