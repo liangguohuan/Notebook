@@ -161,6 +161,8 @@ published: True
     `ctrl + w _`         # Max out the height of the current split
     `ctrl + w |`         # Max out the width of the current split
     `ctrl + w =`         # Normalize all split sizes, which is very handy when resizing terminal
+    `Ctrl+W R`           # Swap top/bottom or left/right split
+    `Ctrl+W o`           # Close every window in the current tabview but the current one
     `:qll`               # 退出所有窗口
 
 ## 可视模式快捷键  
