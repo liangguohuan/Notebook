@@ -1,12 +1,3 @@
----
-layout: post
-title: markdown pandoc
-categories: ['技术']
-tags: []
-published: True
-
----
-
 [Tabular](https://github.com/godlygeek/tabular)
 -----------------------------------------------
 
@@ -48,4 +39,3 @@ published: True
 
     WORD          | COUNT | SUM      
     Edinburgh     | 
-    

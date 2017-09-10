@@ -1,15 +1,4 @@
----
-layout: post
-title: vim 正则表达式
-categories: ['技术']
-tags: ['vim']
-published: True
-
----
-
 Vim正则表达式
-
-<!-- more -->
 
 ```d
 *pattern.txt*   For Vim version 7.4.  Last change: 2013 Jul 06

@@ -1,12 +1,3 @@
----
-layout: post
-title: zsh completion learnning
-categories: ['技术']
-tags: ['shell', 'zsh']
-published: True
-
----
-
 > Come from: http://www.linux-mag.com/id/1106/
 
 If you've been reading this column for the past few months, you've learned about the zsh shell's (http://www.zsh.org) fabulous tab completion system. By adding the following two lines to your \$HOME/.zshrc file, you can use the tab key to not only expand file names, but also get lists of command-line options.
@@ -21,8 +12,6 @@ If you’ve been reading this column for the past few months, you’ve learned a
 autoload -U compinit
 compinit
 ~~~~
-
-<!-- more -->
 
 To provide the list of command-line options for a given Linux command, *zsh* executes the*completion function* associated with that command (i.e., if you type *ls* and press the tab key,*zsh* executes the ls completion function). Each completion function lists command options and shows what options require arguments. A completion function is also context-sensitive. For example, type `man 1` and hit the tab key. Notice the names of the man pages. Next, type `man 3` followed by tab. The list is different. The completion function for `man` is section-specific.
 

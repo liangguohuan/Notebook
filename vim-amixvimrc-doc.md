@@ -1,12 +1,3 @@
----
-layout: post
-title: vim amix/vimrc 文档
-categories: ['技术']
-tags: ['vim']
-published: True
-
----
-
 ## Included Plugins
 
 I recommend reading the docs of these plugins to understand them better. Each of them provide a much better Vim experience!
@@ -28,7 +19,7 @@ I recommend reading the docs of these plugins to understand them better. Each of
 * [vim-airline](https://github.com/bling/vim-airline): Lean & mean status/tabline for vim that's light as air (replacing powerline)
 * [vim-fugitive](https://github.com/tpope/vim-fugitive): A Git wrapper so awesome, it should be illegal
 * [goyo.vim](https://github.com/junegunn/goyo.vim) and [vim-zenroom2](https://github.com/amix/vim-zenroom2): 
-Remove all clutter and focus only on the essential. Similar to iA Writer or Write Room [Read more here](http://amix.dk/blog/post/19744)
+  Remove all clutter and focus only on the essential. Similar to iA Writer or Write Room [Read more here](http://amix.dk/blog/post/19744)
 * [vim-commentary](https://github.com/tpope/vim-commentary): Comment stuff out.  Use `gcc` to comment out a line (takes a count), `gc` to comment out the target of a motion. `gcu` uncomments a set of adjacent commented lines.
 * [syntastic](https://github.com/scrooloose/syntastic): Syntax checking hacks for vim
 
@@ -39,7 +30,7 @@ Remove all clutter and focus only on the essential. Similar to iA Writer or Writ
 ### Plugin related mappings
 
 Open [bufexplorer](https://github.com/vim-scripts/bufexplorer.zip) and see and manage the current buffers:
-    
+​    
     map <leader>o :BufExplorer<cr>
 
 Open [MRU.vim](https://github.com/vim-scripts/mru.vim) and see the recently open files:
@@ -47,7 +38,7 @@ Open [MRU.vim](https://github.com/vim-scripts/mru.vim) and see the recently open
     map <leader>f :MRU<CR>
 
 Open [ctrlp.vim](https://github.com/kien/ctrlp.vim) plugin:
-    
+​    
     let g:ctrlp_map = '<c-f>'
 
 Open [PeepOpen](https://peepcode.com/products/peepopen) plugin:
@@ -74,34 +65,34 @@ Treat long lines as break lines (useful when moving around in them):
 
     map j gj
     map k gk
-    
+
 Map `<Space>` to `/` (search) and `<Ctrl>+<Space>` to `?` (backwards search):
-    
+​    
     map <space> /
     map <c-space> ?
     map <silent> <leader><cr> :noh<cr>
 
 Disable highlight when `<leader><cr>` is pressed:
-    
+​    
     map <silent> <leader><cr> :noh<cr>
 
 Smart way to move between windows:
-    
+​    
     map <C-j> <C-W>j
     map <C-k> <C-W>k
     map <C-h> <C-W>h
     map <C-l> <C-W>l
 
 Closing of current buffer(s):
-    
+​    
     " Close current buffer
     map <leader>bd :Bclose<cr>
     
     " Close all buffers
     map <leader>ba :1,1000 bd!<cr>
-    
+
 Useful mappings for managing tabs:
-    
+​    
     map <leader>tn :tabnew<cr>
     map <leader>to :tabonly<cr>
     map <leader>tc :tabclose<cr>
@@ -110,29 +101,29 @@ Useful mappings for managing tabs:
     " Opens a new tab with the current buffer's path
     " Super useful when editing files in the same directory
     map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
-    
+
 Switch CWD to the directory of the open buffer:
-    
+​    
     map <leader>cd :cd %:p:h<cr>:pwd<cr>
-    
+
 Open vimgrep and put the cursor in the right position:
-    
+​    
     map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
 
 Vimgreps in the current file:
-    
+​    
     map <leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
 
 Remove the Windows ^M - when the encodings gets messed up:
-    
+​    
     noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
-    
+
 Quickly open a buffer for scripbble:
-    
+​    
     map <leader>q :e ~/buffer<cr>
 
 Toggle paste mode on and off:
-    
+​    
     map <leader>pp :setlocal paste!<cr>
 
 
@@ -178,7 +169,7 @@ Surround the visual selection in parenthesis/brackets/etc.:
     vnoremap $$ <esc>`>a"<esc>`<i"<esc>
     vnoremap $q <esc>`>a'<esc>`<i'<esc>
     vnoremap $e <esc>`>a"<esc>`<i"<esc>
-    
+
 
 ### Command line mappings
 
@@ -191,7 +182,7 @@ Bash like keys for the command line:
     cnoremap <C-A>      <Home>
     cnoremap <C-E>      <End>
     cnoremap <C-K>      <C-U>
-
+    
     cnoremap <C-P> <Up>
     cnoremap <C-N> <Down>
 

@@ -1,12 +1,3 @@
----
-layout: post
-title: vim 各种插件快捷键
-categories: ['技术']
-tags: ['vim']
-published: True
-
----
-
 ## [Tabular](https://github.com/godlygeek/tabular)
 
 ### 1. 常用简单处理
@@ -32,7 +23,7 @@ published: True
 - l 文本向左对齐
 - c 文本居中
 - r 文本向右对齐
-num 表示[symbol]两边填充多少个空格
+  num 表示[symbol]两边填充多少个空格
 
 > lcr 不能作用于 symbol 分割的第一个字段
 

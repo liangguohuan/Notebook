@@ -1,15 +1,4 @@
----
-layout: post
-title: sublime 快捷键
-categories: ['技术']
-tags: ['sublime', '开发工具']
-published: True
-
----
-
 Sublime 常用快捷键
-
-<!-- more -->
 
      `Ctrl+Shift+P`       # 打开命令面板
      `Ctrl+P`             # 搜索项目中的文件

@@ -1,12 +1,3 @@
----  
-layout: post  
-title: vim 快捷键  
-categories: ['技术']  
-tags: ['vim']  
-published: True  
-
----  
-
 ## 普通模式快捷键    
 
 ### 根据关键字查找帮助文档或者在帮助文档中链接到对应位置
@@ -29,8 +20,6 @@ published: True
 
     `gu`  # 转换为小写
     `gU`  # 转换为大写
-
-<!-- more -->
 
 ### vim选择技巧
 

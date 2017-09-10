@@ -1,12 +1,3 @@
----
-layout: post
-title: linux 常用命令
-categories: ['技术']
-tags: ['command']
-published: True
-
----
-
 ## 移动光标
 
     `Ctrl-a`  # 移动光标到行首。
@@ -34,8 +25,6 @@ published: True
     `Alt-d`          # 剪切从光标位置到词尾的文本。
     `Alt-Backspace`  # 剪切从光标位置到词头的文本。如果光标在一个单词的开头，剪切前一个单词。
     `Ctrl-y`         # 把剪切环中的文本粘贴到光标位置。
-
-<!-- more -->
 
 ## 系统命令集合
 

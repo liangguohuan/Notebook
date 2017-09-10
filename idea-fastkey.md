@@ -1,15 +1,4 @@
----
-layout: post
-title: IDEA 快捷键
-categories: ['技术']
-tags: ['idea', '开发工具']
-published: True
-
----
-
 Idea 常用快捷键
-
-<!-- more -->
 
      `Alt＋Shift＋left/right` # 定位快速来回跳转
      `Ctrl＋E`                # Show Recent Files　显示最近操作文件，快捷键还可以用连击`Shift`键

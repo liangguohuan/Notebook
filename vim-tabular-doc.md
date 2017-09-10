@@ -1,13 +1,5 @@
----
-layout: post
-title: vim tabular 插件帮助文档
-categories: ['技术']
-tags: ['vim']
-published: True
-
----     
-
-    *Tabular.txt*   Configurable, flexible, intuitive text aligning
+```
+*Tabular.txt*   Configurable, flexible, intuitive text aligning
 
                                                            *tabular* *tabular.vim*
 
@@ -16,32 +8,29 @@ published: True
                #|    #|    #|  #|    #|  #|    #|  #|  #|    #|  #|#|     ~
                #|    #|    #|  #|    #|  #|    #|  #|  #|    #|  #|       ~
                #|      #|#|#|  #|#|#|      #|#|#|  #|    #|#|#|  #|       ~
-
+    
                                                       For Vim version 7.0 or newer
 
-<!-- more -->
-
-------
 
                                    By Matt Wozniski
                                     mjw@drexel.edu
-
+    
                                    Reference Manual ~
-
-                                                                     *tabular-toc*
-
+    
+                                                             		*tabular-toc*
+    
     1. Description                                           |tabular-intro|
     2. Walkthrough                                           |tabular-walkthrough|
     3. Scripting                                             |tabular-scripting|
-
+    
     The functionality mentioned here is a plugin, see |add-plugin|.
     You can avoid loading this plugin by setting the "Tabular_loaded" global
     variable in your |vimrc| file: >
         :let g:tabular_loaded = 1
-
+    
     ==============================================================================
     1. Description                                                 *tabular-intro*
-
+    
     Sometimes, it's useful to line up text.  Naturally, it's nicer to have the
     computer do this for you, since aligning things by hand quickly becomes
     unpleasant.  While there are other plugins for aligning text, the ones I've
@@ -49,17 +38,17 @@ published: True
     to handle complicated tasks.  This plugin aims to make the easy things easy
     and the hard things possible, without providing an unnecessarily obtuse
     interface.  It's still a work in progress, and criticisms are welcome.
-
+    
     ==============================================================================
     2. Walkthrough                                           *tabular-walkthrough*
-
+    
     Tabular's commands are based largely on regular expressions.  The basic
     technique used by Tabular is taking some regex to match field delimiters,
     splitting the input lines at those delimiters, trimming unnecessary spaces
     from the non-delimiter parts, padding the non-delimiter parts of the lines
     with spaces to make them the same length, and joining things back together
     again.
-
+    
     For instance, consider starting with the following lines:
     >
         Some short phrase,some other phrase
@@ -70,7 +59,7 @@ published: True
     command:
     >
       :Tabularize /,
-
+    
         Some short phrase         , some other phrase
         A much longer phrase here , and another long phrase
     <
@@ -81,14 +70,14 @@ published: True
     will look upwards and downwards for lines around the current line that match a
     comma, and consider all contiguous lines matching the pattern to be the range
     to be acted upon.  You can always override this by specifying a range, though.
-
+    
     The second thing you should notice is that you'll almost certainly be able to
     abbreviate :Tabularize to :Tab - using this form in mappings and scripts is
     discouraged as it will make conflicts with other scripts more likely, but for
     interactive use it's a nice timesaver.  Another convenience feature is that
     running :Tabularize without providing a new pattern will cause it to reuse the
     last pattern it was called with.
-
+    
     So, anyway, now the commas line up.  Splitting the lines on commas, Tabular
     realized that 'Some short phrase' would need to be padded with spaces to match
     the length of 'A much longer phrase here', and it did that before joining the
@@ -99,7 +88,7 @@ published: True
     fields, you would provide a different format to the Tabularize command:
     >
       :Tabularize /,/r0
-
+    
                 Some short phrase,      some other phrase
         A much longer phrase here,and another long phrase
     <
@@ -115,7 +104,7 @@ published: True
     text after the comma?  The command would look like this:
     >
       :Tabularize /,/r1c1l0
-
+    
                 Some short phrase , some other phrase
         A much longer phrase here , and another long phrase
     <
@@ -131,9 +120,9 @@ published: True
         abc,def,ghi
         a,b
         a,b,c
-
+    
       :Tabularize /,/r1c1l0
-
+    
         abc , def, ghi
           a , b
           a , b  ,  c
@@ -142,7 +131,7 @@ published: True
     is right aligned, field 5 is center aligned.  No spaces were inserted between
     the 3rd field (containing "def") and the 4th field (the second comma) because
     the format specified 'l0'.
-
+    
     But, what if you only wanted to act on the first comma on the line, rather than
     all of the commas on the line?  Let's say we want everything before the first
     comma right aligned, then the comma, then everything after the comma left
@@ -151,9 +140,9 @@ published: True
         abc,def,ghi
         a,b
         a,b,c
-
+    
       :Tabularize /^[^,]*\zs,/r0c0l0
-
+    
         abc,def,ghi
           a,b
           a,b,c
@@ -162,7 +151,7 @@ published: True
     It matches the beginning of the line, followed by all the non-comma characters
     up to the first comma, and then forgets about what it matched so far and
     pretends that the match starts exactly at the comma.
-
+    
     But, now that this command does exactly what we want it to, it's become pretty
     unwieldy.  It would be unpleasant to need to type that more than once or
     twice.  The solution is to assign a name to it.
@@ -172,7 +161,7 @@ published: True
     Now, typing ":Tabularize first_comma" will do the same thing as typing the
     whole pattern out each time.  Of course this is more useful if you store the
     name in a file to be used later.
-
+    
     NOTE: In order to make these new commands available every time vim starts,
     you'll need to put those new commands into a .vim file in a plugin directory
     somewhere in your 'runtimepath'.  In order to make sure that Tabular.vim has
@@ -182,7 +171,7 @@ published: True
     TabularMaps.vim plugin was installed, and place other files extending
     Tabular.vim in the same directory as TabularMaps.vim.  For more information,
     and some suggested best practices, check out the |tabular-scripting| section.
-
+    
     Lastly, we'll approach the case where tabular cannot achieve your desired goal
     just by splitting lines appart, trimming whitespace, padding with whitespace,
     and rejoining the lines.  As an example, consider the multiple_spaces command
@@ -211,7 +200,7 @@ published: True
     Yeah.  I know it looks complicated.  Bear with me.  I probably will try to add
     in some shortcuts for this syntax, but this verbose will be guaranteed to
     always work.
-
+    
     You should already recognize the name being assigned.  The next thing to
     happen is / \{2,}/ which is a pattern specifying which lines should
     automatically be included in the range when no range is given.  Without this,
@@ -228,10 +217,10 @@ published: True
     end of the pipeline, the Strings in the modified a:lines (or the return value
     of the last expression in the pipeline, if it returns a List) will replace the
     chosen range.
-
+    
     ==============================================================================
     3. Extending                                               *tabular-scripting*
-
+    
     As mentioned above, the most important consideration when extending Tabular
     with new maps or commands is that your plugin must be loaded after Tabular.vim
     has finished loading, and only if Tabular.vim has loaded successfully.  The
@@ -243,7 +232,7 @@ published: True
     <
     The default set of mappings, found in "TabularMaps.vim", is installed in
     the after/plugin/ subdirectory of whatever directory Tabular was installed to.
-
+    
     The other important consideration is making sure that your commands are only
     called if Tabular.vim was actually loaded.  The easiest way to do this is by
     checking for the existence of the :Tabularize command at the start of your
@@ -251,23 +240,24 @@ published: True
     >
       " after/plugin/my_tabular_commands.vim
       " Provides extra :Tabularize commands
-
+    
       if !exists(':Tabularize')
         finish " Give up here; the Tabular plugin musn't have been loaded
       endif
-
+    
       " Make line wrapping possible by resetting the 'cpo' option, first saving it
       let s:save_cpo = &cpo
       set cpo&vim
-
+    
       AddTabularPattern! asterisk /*/l1
-
+    
       AddTabularPipeline! remove_leading_spaces /^ /
                       \ map(a:lines, "substitute(v:val, '^ *', '', '')")
-
+    
       " Restore the saved value of 'cpo'
       let &cpo = s:save_cpo
       unlet s:save_cpo
     <
     ==============================================================================
     vim:tw=78:fo=tcq2:isk=!-~,^*,^\|,^\":ts=8:ft=help:norl:
+```

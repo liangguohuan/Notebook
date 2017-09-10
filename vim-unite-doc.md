@@ -1,21 +1,8 @@
----
-layout: post
-title: vim unite 插件文档
-categories: ['技术']
-tags: ['vim']
-published: True
-
----
-
 [![Unite.vim](https://camo.githubusercontent.com/bc6a0165baa92ee9d0fa1148aaed6834dec8914d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622d63736578746f6e2f756e6974652d6272616e642e706e67)](https://camo.githubusercontent.com/bc6a0165baa92ee9d0fa1148aaed6834dec8914d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622d63736578746f6e2f756e6974652d6272616e642e706e67)
 
 The unite or unite.vim plug-in can search and display information from arbitrary sources like files, buffers, recently used files or registers. You can run several pre-defined actions on a target displayed in the unite window.
 
 The difference between unite and similar plug-ins like fuzzyfinder, ctrl-p or ku is that unite provides an integration interface for several sources and you can create new interfaces using unite.
-
-<!-- more -->
-
-------
 
 ```
 ==============================================================================

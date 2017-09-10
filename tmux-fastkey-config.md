@@ -1,15 +1,4 @@
----
-layout: post
-title: tmux 配置与快捷键
-categories: ['技术']
-tags: ['tmux', 'command']
-published: True
-
----
-
 > 文章转载自：https://linuxtoy.org/archives/from-screen-to-tmux.html
-
-![tmux](/img/tmux.png)
 
 ### 更改默认按键前缀
 
@@ -21,10 +10,6 @@ published: True
     set -g prefix ^a
     unbind ^b
     bind a send-prefix
-
-<!-- more -->
-
----------------------------
 
 > 此段为新增内容
 

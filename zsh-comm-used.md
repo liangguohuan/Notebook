@@ -1,16 +1,7 @@
----
-layout: post
-title: zsh 使用技巧
-categories: ['技术']
-tags: ['shell', 'zsh']
-published: True
-
----
-
-> Official： http://zsh.sourceforge.net/Doc/      
-> Tips：     http://www.rayninfo.co.uk/tips/zshtips.html  
-> Lovers：   http://grml.org/zsh/zsh-lovers.html  
-> Wiki：     http://zshwiki.org/home/
+> Official：http://zsh.sourceforge.net/Doc/      
+> Tips：    http://www.rayninfo.co.uk/tips/zshtips.html  
+> Lovers：  http://grml.org/zsh/zsh-lovers.html  
+> Wiki：    http://zshwiki.org/home/
 
 - 使用 ** 作为下级目录的通配符:
 
@@ -24,10 +15,8 @@ $ ls **/*.pyc
 - 在文件筛选中使用匹配模式:
 
 ```
-    $ ls *.(py|sh)
+$ ls *.(py|sh)
 ```
-
-<!-- more -->
 
 - 在文件筛选中使用修饰符，如：(@) 限制只匹配符号链接：
 
@@ -52,8 +41,9 @@ mv bar.htm bar.html
 
 ## alias
 - 文件关联执行程序
-
-`alias -s [ext]=[cmd]`
+```
+alias -s [ext]=[cmd]
+```
 
 `ext` 文件扩展名  
 `cmd` 关联的执行程序
@@ -67,8 +57,9 @@ alias -s php=vim
 ```
 
 - 全局别名：可以理解为将别名当作变量
-
-`alias -g [var]`
+```
+alias -g [var]
+```
 
 实例：
 
